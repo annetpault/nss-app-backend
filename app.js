@@ -35,7 +35,7 @@ const Vol=mongoose.model("Vols",new mongoose.Schema(
     }
 ))
 
-app.get("/view-vol",async(req,res)=> {
+app.post("/view-vol",async(req,res)=> {
     const vols=await Vol.find()
     res.json(vols);
 });
